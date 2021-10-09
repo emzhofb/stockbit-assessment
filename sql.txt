@@ -1,0 +1,3 @@
+SELECT id, UserName, 
+(SELECT c.UserName FROM USER as c WHERE c.id = b.Parent) as ParentUserName
+FROM USER as b;
